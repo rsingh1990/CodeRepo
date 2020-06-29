@@ -4,8 +4,8 @@ public class Palindrome {
 
 	public static void main(String arr[]) {
 		Scanner sc = new Scanner(System.in);
-		int number = sc.nextInt();
-		String temp = Integer.toString(number);
+		long number = sc.nextLong();
+		String temp = Long.toString(number);
 		int[] newArray = new int[temp.length()];
 		for (int i = 0; i < temp.length(); i++) {
 			newArray[i] = temp.charAt(i) - '0';
@@ -13,7 +13,7 @@ public class Palindrome {
 		System.out.println(palindromeDescendant(newArray,temp,number));
 	}
 		
-		public static boolean palindromeDescendant(int[] newArray,String temp,int number)
+		public static boolean palindromeDescendant(int[] newArray,String temp,long number)
 		{
 		int i = 0;
 		int j = temp.length();
@@ -21,12 +21,12 @@ public class Palindrome {
 		int count = 0;
 		while (i < j) {
 			
-			    int  reversed = 0;
-			    int n = number;
+			    long  reversed = 0;
+			    long n = number;
 			    if(n>=10)
 			    {
 		        while(n != 0) {
-		            int digit = n % 10;
+		            long digit = n % 10;
 		            reversed = reversed * 10 + digit;
 		            n /= 10;
 		        }
